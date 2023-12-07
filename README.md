@@ -37,7 +37,7 @@ You don't need to have a PHP environment with composer installed.
     * Start the needed services with `docker compose up -d`
 
 4. Install pimcore and initialize the DB
-    `docker compose exec php vendor/bin/pimcore-install`
+    `docker compose exec php vendor/bin/pimcore-install --mysql-host-socket=db --mysql-username=db --mysql-password=db --mysql-database=db`
     * When asked for admin user and password: Choose freely
     * This can take a while, up to 20 minutes
     * If you select to install the SimpleBackendSearchBundle please make sure to add the `pimcore_search_backend_message` to your `.docker/supervisord.conf` file.
@@ -54,3 +54,4 @@ You don't need to have a PHP environment with composer installed.
 
 ## Other demo/skeleton packages
 - [Pimcore Basic Demo](https://github.com/pimcore/demo)
+
